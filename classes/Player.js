@@ -6,16 +6,19 @@ export class Player{
     }
     recordTime(start,end){
         let duration = (end-start)
+        // console.log("time",duration);
         this.times.push(duration)
    }
    showStats(){
-    let ollTime;
+    let ollTime = 0;
     this.times.forEach(element => {
+        // console.log("cca",element)
         ollTime += element;
     }); 
-    console.log("total time =",ollTime);
+    console.clear();
+    console.log("total time =",ollTime, "seconds");
     let average = ollTime/this.times.length;
-    console.log("Average time per reddle",average)
+    console.log("Average time per reddle =",average, "seconds")
    }
 }
 // Class: Player

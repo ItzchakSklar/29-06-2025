@@ -9,6 +9,7 @@ export class Riddle{
         Riddle.nextId ++;
     }
     ask(){
+        console.clear();
         console.log(this.name);
         let goodEneser = false;
         while (!goodEneser){

@@ -1,7 +1,8 @@
-const Chack = true;
+const Chack = false;
 import readline from "readline-sync";
 import {arrRiddles} from "./importRiddles.js"
 import { Player } from "./classes/Player.js";
+
 // import {Riddle} from "./classes/Riddle.js";
 console.log("Welcome to the Riddle Game!");
 const name = readline.question("What is your name?:")
@@ -9,19 +10,24 @@ const player = new Player(name);
 if (Chack){console.log("my name is",player.name)}
 arrRiddles.forEach(element => {
     if (Chack){console.log("id reddle is",element.id)}
-    let minutes = now.getMinutes().toString().padStart(2, '0');
-    let seconds = now.getSeconds().toString().padStart(2, '0');
-    seconds += minutes*60;
-    let start = seconds;
+    let start = ChachTime(new Date())
     element.ask();
-    minutes = now.getMinutes().toString().padStart(2, '0');
-    seconds = now.getSeconds().toString().padStart(2, '0');
-    seconds += minutes*60;
-    let end = seconds;
+    let end = ChachTime(new Date())
+    if (Chack) {console.log(`srart = ${start}\nend = ${end}`)}
     player.recordTime(start,end)
 }
 )
 player.showStats();
+
+function ChachTime(now){
+    let seconds = now.getSeconds();
+    let minutes = now.getMinutes();
+    let hour = now.getHours();
+    seconds += minutes*60;
+    seconds += hour*60*60;
+    return seconds
+}
+
 
 
 // Breakdown
