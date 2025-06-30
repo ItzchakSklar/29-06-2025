@@ -1,25 +1,28 @@
 import readline from "readline-sync";
-export class Riddle{
+
+export class Riddle {
     static nextId = 1;
-    constructor(name,taskDescription,correctAnswer){
+    constructor(name, taskDescription, correctAnswer) {
         this.id = Riddle.nextId;
         this.name = name;
         this.taskDescription = taskDescription;
         this.correctAnswer = correctAnswer;
-        Riddle.nextId ++;
+        Riddle.nextId++;
     }
-    ask(){
+
+    // 
+    ask() {
         console.clear();
         console.log(this.name);
         let goodEneser = false;
-        while (!goodEneser){
-        console.log(this.taskDescription);
-        const userEnser = readline.question("enter your enser:")
-        if (userEnser == this.correctAnswer){
-            goodEneser = true    
+        while (!goodEneser) {
+            console.log(this.taskDescription);
+            const userEnser = readline.question("enter your enser:")
+            if (userEnser == this.correctAnswer) {
+                goodEneser = true
+            }
+        }
     }
-    }
-}
 }
 // Class: Riddle
 // Represents a single riddle.
@@ -41,5 +44,5 @@ export class Riddle{
 //     console.log(element.taskDescription);
 //     const userEnser = readline.question("enter your enser:")
 //     if (userEnser == element.correctAnswer){
-//         goodEneser = true    
+//         goodEneser = true
 // }
