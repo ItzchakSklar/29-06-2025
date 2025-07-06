@@ -1,6 +1,6 @@
 
 // TODO: Add documentation
-export function CheckTime(now) {
+export function ChachTime(now) {
     let seconds = now.getSeconds();
     let minutes = now.getMinutes();
     let hour = now.getHours();

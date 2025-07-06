@@ -1,6 +1,7 @@
 import readline from "readline-sync";
 import { arrRiddles } from "./importRiddles.js"
 import { Player } from "./classes/Player.js";
+import { ChachTime } from "./utils/time.js";
 
 const Chack = false;
 
