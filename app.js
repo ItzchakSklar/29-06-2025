@@ -7,7 +7,7 @@ const Chack = false;
 
 // import {Riddle} from "./classes/Riddle.js";
 console.log("Welcome to the Riddle Game!");
-const name = readline.question("What is your name?:")
+const name = readline.question("What is your name? : ")
 
 const player = new Player(name);
 
