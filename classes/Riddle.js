@@ -1,13 +1,11 @@
 import readline from "readline-sync";
 
 export class Riddle {
-    static nextId = 1;
-    constructor(name, taskDescription, correctAnswer) {
-        this.id = Riddle.nextId;
+    constructor(id,name, taskDescription, correctAnswer) {
+        this.id = id;
         this.name = name;
         this.taskDescription = taskDescription;
         this.correctAnswer = correctAnswer;
-        Riddle.nextId++;
     }
 
     // 
