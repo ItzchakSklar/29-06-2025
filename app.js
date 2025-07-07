@@ -1,29 +1,32 @@
 import readline from "readline-sync";
 import { arrRiddles } from "./importRiddles.js"
 import { Player } from "./classes/Player.js";
-import { ChachTime } from "./utils/time.js";
-
-const Chack = false;
+import { printMenu } from "./utils/menu.js";
+import { runGame } from "./utils/runGame.js";   
 
 // import {Riddle} from "./classes/Riddle.js";
 console.log("Welcome to the Riddle Game!");
-const name = readline.question("What is your name? : ")
+const name = readline.question("What is your name? :")
 
 const player = new Player(name);
 
-if (Chack) { console.log("my name is", player.name) }
+let run = true
+while(run){
 
-// 
-arrRiddles.forEach(element => {
-    if (Chack) { console.log("id reddle is", element.id) }
-    let start = ChachTime(new Date())
-    element.ask();
-    let end = ChachTime(new Date())
-    if (Chack) { console.log(`srart = ${start}\nend = ${end}`) }
-    player.recordTime(start, end)
-})
+    printMenu()
+    let Choice = readline.question('Enter choice: ');
 
-player.showStats();
+    switch (Choice){
+        case "1":{
+            runGame(arrRiddles,player);
+            break;
+        }
+        case "2":{
+            run = false;
+            break;        
+        }
+    }
+}
 
 
 
