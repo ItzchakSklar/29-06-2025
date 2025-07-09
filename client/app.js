@@ -1,8 +1,10 @@
 import readline from "readline-sync";
-import { arrRiddles } from "./importRiddles.js"
 import { Player } from "./classes/Player.js";
-import { printMenu } from "./utils/menu.js";
-import { runGame } from "./utils/runGame.js";   
+import { printMenu,
+    runGame,
+    creatRiddleAndSend,
+    updateArrRiddles
+ } from "./utils/importUtils.js"
 
 // import {Riddle} from "./classes/Riddle.js";
 console.log("Welcome to the Riddle Game!");
@@ -18,10 +20,15 @@ while(run){
 
     switch (Choice){
         case "1":{
+            const arrRiddles = updateArrRiddles
             runGame(arrRiddles,player);
             break;
         }
         case "2":{
+            creatRiddleAndSend()
+            break;        
+        }
+        case "3":{
             run = false;
             break;        
         }

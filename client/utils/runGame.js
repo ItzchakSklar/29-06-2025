@@ -1,4 +1,4 @@
-import { ChachTime } from "./time.js";
+import { ChachTime } from "./timeSeconds.js";
 
 export function runGame(arrRiddles,player){
     arrRiddles.forEach(element => {

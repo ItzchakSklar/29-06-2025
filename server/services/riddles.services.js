@@ -5,4 +5,8 @@ function getAllRiddles(){
     return data;
 }
 
-export {getAllRiddles}
+function addRiddle(){
+
+}
+
+export {getAllRiddles,addRiddle}
