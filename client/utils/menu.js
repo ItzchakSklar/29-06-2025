@@ -7,7 +7,7 @@ What do you want to do?
 4. Update an existing riddle
 5. Delete a riddle
 6. View leaderboard
-3. Exit
+7. Exit
     `);
 }
 
