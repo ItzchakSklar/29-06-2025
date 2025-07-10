@@ -1,7 +1,6 @@
 import { creatRiddle } from "../services/creatRiddle.js";
 import { addRiddle } from "../api/RiddlesApi.js";
 
-const fetch = require('node-fetch')
 
 export async function creatRiddleAndSend(){
 

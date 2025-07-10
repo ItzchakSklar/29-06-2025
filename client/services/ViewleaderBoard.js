@@ -1,6 +1,6 @@
-import ViewleaderBoardApi from "../api/UseresApi.js";
+import { ViewleaderBoardApi } from "../api/UseresApi.js";
 
-export async function ViewleaderBoard() {
+export default async function ViewleaderBoard() {
     const leaderboard = await ViewleaderBoardApi();
 
     if (leaderboard.length === 0) {

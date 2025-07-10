@@ -7,31 +7,31 @@ import {
     ViewleaderBoard
  } from "./importUtilsSwitch.js"
 
-export default function switchChoice(Choice){
+export default async function switchChoice(Choice,player){
     switch (Choice){
         case "1":{
-            const arrRiddles = updateArrRiddles
-            runGame(arrRiddles,player);
+            
+            await runGame(player);
             return true;  
         }
         case "2":{
-            creatRiddleAndSend();
+            await creatRiddleAndSend();
             return true;        
         }
         case "3":{
-            ShowAllRiddles();
+            await ShowAllRiddles();
             return true;        
         }
         case "4":{
-            UpdateExistingRiddle();
+            await UpdateExistingRiddle();
             return true;        
         }
         case "5":{
-            DeleteRiddle();
+            await DeleteRiddle();
             return true;        
         }
         case "6":{
-            ViewleaderBoard();
+            await ViewleaderBoard();
             return true;        
         }
         case "7":{

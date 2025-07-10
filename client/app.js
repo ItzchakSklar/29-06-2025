@@ -1,21 +1,22 @@
 import readline from "readline-sync";
 import { Player } from "./classes/Player.js";
 import { printMenu,switchChoice,} from "./utils/importUtilsApp.js"
+// import { User } from "./api/UseresApi.js"
 
 
-// import {Riddle} from "./classes/Riddle.js";
 console.log("Welcome to the Riddle Game!");
-const name = readline.question("What is your name? :")
+const name = readline.question("What is your name?: ");
+// User(name);
 
 const player = new Player(name);
 
-let run = true
+let run = true;
 
 while(run){
 
     printMenu()
     let Choice = readline.question('Enter choice: ');
-    run = switchChoice(Choice)
+    run = await switchChoice(Choice,player);
 }
 
 

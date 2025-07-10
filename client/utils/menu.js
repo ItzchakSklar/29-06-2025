@@ -1,4 +1,4 @@
-export function printMenu(){
+export default function printMenu(){
     console.log(`
 What do you want to do?
 1. Play the game

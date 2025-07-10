@@ -1,10 +1,10 @@
 {
   "name": "29-06-2025",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "controllers/riddle.controllers.js",
   "type": "module",
   "scripts": {
-    "start":"node --watch --env-file=.env app.js",
+    "start": "node --watch --env-file=.env index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,6 +12,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "express": "^5.1.0",
     "node-fetch": "^3.3.2",
     "readline-sync": "^1.4.10"
   }

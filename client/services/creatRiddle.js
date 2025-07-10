@@ -1,4 +1,4 @@
-import { Riddle } from "../classes/Riddle"
+import { Riddle } from "../classes/Riddle.js"
 import readline from "readline-sync";
 
 

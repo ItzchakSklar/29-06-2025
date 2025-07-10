@@ -1,6 +1,12 @@
 import { ChachTime } from "./timeSeconds.js";
+import { GetAllRiddles } from "../api/RiddlesApi.js"
 
-export function runGame(arrRiddles,player){
+export async function runGame(player){
+
+    const arrRiddles = await GetAllRiddles();
+
+    // console.log("arrRiddles:", arrRiddles);
+
     arrRiddles.forEach(element => {
             let start = ChachTime(new Date());
             element.ask();

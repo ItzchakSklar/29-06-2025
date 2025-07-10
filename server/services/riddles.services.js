@@ -1,12 +1,22 @@
-import { getAllRiddlesdb } from "../dal/riddles.dal.js"
+import { getRiddlesDal,writeBackRiddlesDal } from "../dal/riddles.dal.js"
 
-function getAllRiddles(){
-    const data = getAllRiddlesdb();
-    return data;
+export async function getRiddles(){
+    const data = await getRiddlesDal();
+    const PresedData = await JSON.parse(data);
+    // console.log(PresedData);
+    return PresedData;
 }
 
-function addRiddle(){
-
+export function writeBackRiddles(NewRiddles){
+    return writeBackRiddlesDal(NewRiddles.JSON.stringify(arrRiddls, null, 2))
 }
 
-export {getAllRiddles,addRiddle}
+export function isValidRiddle(riddle) {
+    return (
+        riddle.hasOwnProperty('id') &&
+        riddle.hasOwnProperty('name') &&
+        riddle.hasOwnProperty('taskDescription') &&
+        riddle.hasOwnProperty('correctAnswer')
+    );
+}
+

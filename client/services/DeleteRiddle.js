@@ -1,5 +1,5 @@
 import readline from "readline-sync";
-import { CheckRiddelIfExist,DeleteRiddleApi } from "../api/RiddlesApi";
+import { CheckRiddelIfExist,DeleteRiddleApi } from "../api/RiddlesApi.js";
 
 export default async function DeleteRiddle(){
 
